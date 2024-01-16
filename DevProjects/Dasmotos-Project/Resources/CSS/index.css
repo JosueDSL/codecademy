@@ -1,0 +1,10 @@
+h1 {
+    font-family: Helvetica;
+    font-size: 100px;
+    font-weight: bold;
+    color: khaki;
+    text-align: center;
+    margin: 67px auto;
+    background-image: url(../Images/pattern.jpeg);
+    width: 100%;
+}
