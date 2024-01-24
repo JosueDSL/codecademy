@@ -1,0 +1,40 @@
+body {
+    box-sizing: border-box;
+    background-color: hsla(276, 100%, 75%, 0.38);
+    font-family: 'Roboto', sans-serif;
+}
+h1 {
+    text-align: center;
+    color: rgb(101, 67, 129);
+}
+h2 {
+    text-align: center;
+    color: rgb(67, 81, 129);
+}
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 1px solid black;
+    width: 50%;
+    background-color: rgb(255, 255, 255);
+}
+
+table td, table th {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+table th {
+    background-color: rgb(190, 155, 255);
+    color: rgb(101, 67, 129);
+}
+
+code.code {
+    background-color: hsla(212, 100%, 69%, 0.534);
+}
+
+td .code {
+    display: block;
+    text-align: center;
+}
