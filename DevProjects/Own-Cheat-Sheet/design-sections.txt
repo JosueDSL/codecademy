@@ -1,0 +1,18 @@
+The style guide should include a labeled section outlining the colors to be used.
+
+Each color should have:
+
+A name
+A box displaying the color itself.
+The CSS value used to create the color (in hex, rgb(), rgba(), hsl(), or hsla()).
+An optional description of how you intend to use the colors.
+
+Basically create a color palette for the general website.
+
+Te style should include a labeled section of the fonts to be used
+For each font, the goal is to to demonstrate the various styles that are intended to be used (font weight, style, size, and text decorations). 
+The following for every font should be included:
+
+The font name
+A series of styles that you intend to use (for example, styles could include: plain, bold and italic, underlined).
+For each style, include a sentence or series of words to demonstrate the text style (our example site uses the quick brown fox…).
