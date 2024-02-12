@@ -1,0 +1,39 @@
+/* Globals */
+
+
+/* Header */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  background-color: #f2f2f2;
+}
+
+header nav ul li{
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    padding: .6rem;
+}
+
+/* Mission */
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  background-image: url(../images/banner.jpg);
+}
+
+.mission {
+  box-sizing: border-box;
+  text-align: center;
+  padding: 25px;
+  background-color: #f2f2f2;
+  height: 40%;
+  width: 50%;
+}
+/* Team */

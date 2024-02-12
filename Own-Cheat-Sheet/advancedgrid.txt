@@ -1,0 +1,127 @@
+The grid-template-areas property allows you to name sections of your web page to use as values in the grid-row-start, grid-row-end, 
+grid-column-start,grid-column-end, and grid-area properties. This property is declared on grid containers.
+<div class="container">
+  <header>Welcome!</header>
+  <nav>Links!</nav>
+  <section class="info">Info!</section>
+  <section class="services">Services!</section>
+  <footer>Contact us!</footer>
+</div>
+.container {
+  display: grid;
+  max-width: 900px;
+  position: relative;
+  margin: auto;
+  grid-template-areas: "header header"
+                       "nav nav" 
+                       "info services"
+                       "footer footer";
+  grid-template-rows: 300px 120px 800px 120px;
+  grid-template-columns: 1fr 3fr; 
+}
+header {
+  grid-area: header;
+} 
+nav {
+  grid-area: nav;
+} 
+.info {
+  grid-area: info;
+} 
+.services {
+  grid-area: services;
+}
+footer {
+  grid-area: footer;
+} 
+justify-items is a property that positions grid items along the inline, or row, axis.
+This means that it positions items from left to right across the web page. This property is declared on grid containers.
+justify-items accepts these values:
+
+start — aligns grid items to the left side of the grid area
+end — aligns grid items to the right side of the grid area
+center — aligns grid items to the center of the grid area
+stretch — stretches all items to fill the grid area
+
+We can use justify-content to position the entire grid along the row axis. This property is declared on grid containers.
+It accepts the same as justify-items plus:
+space-around — includes an equal amount of space on each side of a grid element, resulting in double the amount of space between elements as there is before the first and after the last element
+space-between — includes an equal amount of space between grid items and no space at either end
+space-evenly — places an even amount of space between grid items and at either end\
+main {
+  display: grid;
+  width: 1000px;
+  grid-template-columns: 300px 300px;
+  grid-template-areas: "left right"; 
+  justify-content: center;
+}
+In the example above, the grid container is 1000 pixels wide, but we only specified two columns that are 300 pixels each. This will leave 400 pixels of unused space in the grid container.
+justify-content: center; positions the columns in the center of the grid, leaving 200 pixels on the right and 200 pixels on the left of the grid.
+
+align-items is a property that positions grid items along the block, or column axis. This means that it positions items from top to bottom. This property is declared on grid containers.
+align-items accepts these values:
+
+start — aligns grid items to the top side of the grid area
+end — aligns grid items to the bottom side of the grid area
+center — aligns grid items to the center of the grid area
+stretch — stretches all items to fill the grid area
+
+align-content positions the rows along the column axis, or from top to bottom, and is declared on grid containers.\
+It accepts these positional values:
+
+start — aligns the grid to the top of the grid container
+end — aligns the grid to the bottom of the grid container
+center — centers the grid vertically in the grid container
+stretch — stretches the grid items to increase the size of the grid to expand vertically across the container
+space-around — includes an equal amount of space on each side of a grid element, resulting in double the amount of space between elements as there is before the first and after the last element
+space-between — includes an equal amount of space between grid items and no space at either end
+space-evenly — places an even amount of space between grid items and at either end
+main {
+  display: grid;
+  height: 600px;
+  grid-template-rows: 200px 200px;
+  grid-template-areas: "top"
+                       "bottom"; 
+  align-content: center;
+}
+
+In the example above, the grid container is 600 pixels tall, but we only specified two rows that are 200 pixels each. This will leave 200 pixels of unused space in the grid container.
+align-content: center; positions the rows in the center of the grid, leaving 100 pixels at the top and 100 pixels at the bottom of the grid.
+
+justify-self specifies how an individual element should position itself with respect to the row axis. This property will override justify-items for any item on which it is declared.
+align-self specifies how an individual element should position itself with respect to the column axis. This property will override align-items for any item on which it is declared.
+
+These properties are declared on grid items. They both accept these four properties: 
+
+start — positions grid items on the left side/top of the grid area
+end — positions grid items on the right side/bottom of the grid area
+center — positions grid items on the center of the grid area
+stretch — positions grid items to fill the grid area (default)
+
+The implicit grid is an algorithm built into the specification for CSS Grid that determines default behavior 
+for the placement of elements when there are more than fit into the grid specified by the CSS.
+Grid provides two properties to specify the size of grid tracks added implicitly: grid-auto-rows and grid-auto-columns. 
+These properties are declared on grid containers.
+grid-auto-rows specifies the height of implicitly added grid rows. grid-auto-columns specifies the width of implicitly added grid columns.
+
+grid-auto-rows and grid-auto-columns accept the same values as their explicit counterparts, grid-template-rows and grid-template-columns.
+
+grid-auto-flow specifies whether new elements should be added to rows or columns, and is declared on grid containers.
+grid-auto-flow accepts these values:
+
+row — specifies the new elements should fill rows from left to right and create new rows when there are too many elements (default)
+column — specifies the new elements should fill columns from top to bottom and create new columns when there are too many elements
+dense — this keyword invokes an algorithm that attempts to fill holes earlier in the grid layout if smaller elements are added
+You can pair row or column with dense, like this: grid-auto-flow: row dense;
+
+grid-template-areas specifies grid named grid areas
+grid layouts are two-dimensional: they have a row, or inline, axis and a column, or block, axis.
+justify-items specifies how individual elements should spread across the row axis
+justify-content specifies how groups of elements should spread across the row axis
+justify-self specifies how a single element should position itself with respect to the row axis
+align-items specifies how individual elements should spread across the column axis
+align-content specifies how groups of elements should spread across the column axis
+align-self specifies how a single element should position itself with respect to the column axis
+grid-auto-rows specifies the height of rows added implicitly to the grid
+grid-auto-columns specifies the width of columns added implicitly to the grid
+grid-auto-flow specifies in which direction implicit elements should be created
